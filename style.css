@@ -1,39 +1,338 @@
+/*-----font---- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/*---------------
+common & utilities
+------------------*/
 body{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 h1{
-    font-size: 60px;
+    font-size: 3em;
+    margin: 0;
+    color: #3A3A3A; 
 }
-.dim-text{
-    color: white;
+p,span{
+    font-size: 16px;
+    font-weight: 600;
+    color: #3A3A3A;
 }
-.company-name{
-    color: #ff3b88;
-}
-.dis-flex{
+/* -------------
+navigation-area
+----------------*/
+nav{
     display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
 }
-.half-width{
-    width: 50%;
+nav ul{
+    display: flex;
+    list-style:none;
 }
-.half-width img{
-    width: 100%;
+nav ul a{
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 10px;
+    font-size: 16px;
+    color: #3A3A3A;
+    font-weight: 600;
 }
-.intro-section{
-    margin-left: 70px;
-    padding-right: 40px;
-    margin-top: 40px;
+nav .logo-heading{
+    font-size: 24px;
+    color: #3A3A3A;
+}
+.fontawsome-nav{
+    font-size: 1.5em;
+}
+/* ------------------
+journey section
+-------------------- */
+.container{
+    max-width: 1050px;
+    margin: 0 auto 50px;
+    padding: 0 30px;
+}
+.top-area{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+}
+.top-area img{
+    width: 90%;
+}
+.top-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .button-design{
     text-decoration: none;
-    color: black;
-    background-image: linear-gradient(lightgreen, cyan);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
+    color: white;
+    background-color: #E02C6D;
+    padding: 10px 24px;
+    border-radius: 40px;
 }
-.bg-img{
-    background-image: url(images/bg1.png);
-    background-size: 100%;
+.button-design:active{
+    transform: scale(0.9);
 }
+.fa-arrow-right{
+    color: white;
+}
+.logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6em;
+}
+.logos-gap{
+    margin: 20px;
+}
+/*-------------------
+product section
+------------------ */
+.product-heading , .contact-heading{
+    text-align: center;
+    font-size: 2em;
+    color:#3A3A3A;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 1000px ;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+.product{
+    margin:10px;
+    padding: 15px;
+    box-shadow: 0px 0px 40px #d4d4d4;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+.product:hover{
+    transform: scale(1.03);
+}
+.product-details h3{
+    font-size: 28px;
+    font-weight: 500;
+    color: #18191F;
+}
+.product-details p{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.87);
+}
+.dollar-width{
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.87);
+}
+.product-info p{
+    color: rgba(0, 0, 0, 0.568);
+}
+.fa-star.field{
+    color: #FB8200;
+}
+.fa-star.empty{
+    color: #c4c4d4;
+}
+.see-more-option{
+    text-align: right;
+    color: rgba(224, 44, 109, 0.87);
+}
+/* --------------
+contact section
+---------------- */
+.contact-mediams{
+    display: grid;
+    grid-template-columns: repeat(3, 0.3fr);
+    column-gap : 10px;
+    justify-content: center;
+    transition:  1s;
+}
+.mediam{
+    text-align: center;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 10px;
+    transition: transform 1s;
+}
+.mediam:hover{
+    transform: scaleX(1.04);
+}
+.mediam p{
+    font-size: 12px;
+}
+/* comment-section */
+.comment-area{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 15px;
+    margin-top: 30px;
+}
+.row-object{
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.submit-button{
+    width: 100px;
+    padding: 10px;
+    background-color: rgba(224, 44, 109, 0.87);
+    color: white;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+/* --------------
+footer section
+----------------- */
+.footer-section{
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color: #0A0826;
+    padding: 30px 0px;
+}
+.footer-section h3{
+    font-size: 1.5em;
+    margin: 0;
+}
+.footer-section p{
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+}
+.social-icon{
+    color: white;
+    padding: 10px;
+}
+/*------------------------------
+footer end
+------------------------------ */
+
+/* ------------------
+media Quareis
+------------------- */
+
+/* -----mobile device----- */
+@media only screen and ( max-width: 688px) {
+    .container{
+        text-align: center;
+    }
+    /* ------------
+    navigation section
+    -------------- */
+    nav .logo-heading {
+        font-size: 1.1em;
+    }
+    nav ul .no-responsive-view{
+        display: none;
+    }
+    .fontawsome-nav{
+        font-size: 1.2em;
+    }
+    /* --------------
+    top section
+    --------------- */
+    .top-area{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+    }
+    .top-heading{
+        order: 2;
+        font-size: 0.5em;
+        align-items: center;
+    }
+    .top-heading a{
+        font-size: 1.5em;
+    }
+    .top-picture{
+        order: 1;
+    }
+    .logos{
+        display: none;
+    }
+    /* -----------------------
+    popular product section 
+    ---------------------------*/
+    .products{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+    }
+    .product-heading{
+        font-size: 1.2em;
+    }
+    .product-details {
+        font-size: 1.5em;
+    }
+    .dollar-width{
+        font-size: 1.2em;
+    }
+    /* -------------
+    contact section
+    ---------------- */
+    .contact-mediams {
+        display: grid;
+        grid-template-columns: repeat(3, 0.5fr);
+    }
+    .contact-heading{
+        font-size: 1.2em;
+    }
+    .mediam{
+        font-size: 8px;
+    }
+    .mediam p{
+        font-size: 8px;
+        padding: 5px;
+    }
+}
+/*----------------------
+ tablet device
+ ----------------- */
+ @media only screen and (min-width:688px) and (max-width:992px) {
+    /* -----------
+    navigation
+    ------------*/
+    nav .logo-heading {
+        font-size: 1.5em;
+    }
+    nav ul .no-responsive-view{
+        display: none;
+    }
+    .fontawsome-nav{
+        font-size: 1.5em;
+    }
+    /* ------------- 
+    top heading
+    ----------------- */
+    .top-heading{
+        font-size: 0.7em;
+    }
+    .logos{
+        display: none;
+    }
+    /* -------------
+    popular products
+    ----------------- */
+    .products{
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+        justify-content: center;
+    }
+    .see-more-option{
+        text-align: center;
+    }
+    /* ---------------
+    contact area
+    ----------------- */
+    .contact-mediams {
+        display: grid;
+        grid-template-columns: repeat(3, 0.3fr);
+        column-gap: 10px;
+        justify-content: center;
+    }
+    .comment-area{
+        width: 100%;
+    }
+ }
